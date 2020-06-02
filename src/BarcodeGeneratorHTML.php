@@ -9,12 +9,12 @@ class BarcodeGeneratorHTML extends BarcodeGenerator
      *
      * @param string $barcode code to print
      * @param string $type type of barcode
-     * @param int $widthFactor Width of a single bar element in pixels.
+     * @param float $widthFactor Width of a single bar element in pixels.
      * @param int $height Height of a single bar element in pixels.
      * @param string $foregroundColor Foreground color for bar elements as '#333' or 'orange' for example (background is transparent).
      * @return string HTML code.
      */
-    public function getBarcode($barcode, $type, int $widthFactor = 2, int $height = 30, string $foregroundColor = 'black')
+    public function getBarcode($barcode, $type, float $widthFactor = 2, int $height = 30, string $foregroundColor = 'black')
     {
         $barcodeData = $this->getBarcodeData($barcode, $type);
 

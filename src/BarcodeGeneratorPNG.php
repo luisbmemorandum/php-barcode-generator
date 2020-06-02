@@ -44,12 +44,12 @@ class BarcodeGeneratorPNG extends BarcodeGenerator
      *
      * @param string $barcode code to print
      * @param string $type type of barcode:
-     * @param int $widthFactor Width of a single bar element in pixels.
+     * @param float $widthFactor Width of a single bar element in pixels.
      * @param int $height Height of a single bar element in pixels.
      * @param array $foregroundColor RGB (0-255) foreground color for bar elements (background is transparent).
      * @return string image data or false in case of error.
      */
-    public function getBarcode($barcode, $type, int $widthFactor = 2, int $height = 30, array $foregroundColor = [0, 0, 0])
+    public function getBarcode($barcode, $type, float $widthFactor = 2, int $height = 30, array $foregroundColor = [0, 0, 0])
     {
         $barcodeData = $this->getBarcodeData($barcode, $type);
         $width = round($barcodeData->getWidth() * $widthFactor);
